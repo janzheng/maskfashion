@@ -10,7 +10,7 @@
 
 
 
-<div class="Cytosis" id="cytosis-{tableName}">
+<div class="Cytosis" id="cytosis-{tableQuery}">
 	<slot></slot>
 </div>
 
@@ -22,7 +22,8 @@
 
 	export let airKey, airBase, tableQuery, routeName
 	export let cytosis // the db object
-	export let tableName, table
+	export let tableName // convenience — gets the table you want 
+	export let table // convenience — gets the table you want quickly
 
   onMount(async () => {
 	  try {
@@ -32,9 +33,12 @@
 	      tableQuery,
 	      routeName,
 	    });
-	    console.log('cydata/cytosis', _cytosis)
+	    // console.log('cydata/cytosis', _cytosis)
 	    cytosis = await _cytosis
-	    table = cytosis.tables[tableName]
+	    console.log('cydata/cytosis', cytosis)
+
+	    if(tableName && table)
+	    	table = cytosis.tables[tableName]
 	  } catch(err) {
 	    console.error('[Cytosis Data Error]:', err)
 	    return Promise.reject()

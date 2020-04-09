@@ -34,9 +34,11 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "commit": "git add . -A ; git commit ; git push origin master ",
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
     "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev"
+    "start:dev": "sirv public --single --dev",
+    "surge": "cd public; surge . -d maskfashion.surge.sh"
   }
 }

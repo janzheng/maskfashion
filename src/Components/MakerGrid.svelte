@@ -1,18 +1,18 @@
 
-
+<!-- 
 <Cytosis 
 	tableName={'Mask Makers'} 
 	airKey={'keylYLkFHWTY3b8Ca'} 
 	airBase={'appU40RlkLFNfoQ3X'} 
   tableQuery={'mask-makers'}
   routeName={'mask-makers'}
-  bind:cytosis
-  bind:table
->
+  bind:cytosis={$cytosis}
+  bind:table={$makers}
+> -->
 	<div>
-		{#if table}
+		{#if $makers}
 			<ul class="maker-grid">
-				{#each table as item (item.id)}
+				{#each $makers as item (item.id)}
 					{#if item.fields.Photos && item.fields.Photos.length > 0}
 						<div class="maker-item-container">
 							<div class="maker-item">
@@ -31,22 +31,30 @@
 			</ul>
 		{/if}
 	</div>
-</Cytosis>
+<!-- </Cytosis> -->
 
 
 
 
 
 <script>
-  import Cytosis from './Components/Cytosis.svelte'
+  import { cytosis, makers, content } from '../stores.js';
+  import Cytosis from './Cytosis.svelte'
 	import marked from 'marked'
 
-	let cytosis, table // bound from pass-through slot
+	// $: let _cytosis, _makers // bound from pass-through slot
+  // cytosis.update(_cytosis)
+  // makers.update(_makers)
+  // content.set(cytosis.tables['content'])
 
   marked.setOptions({
     gfm: true,
     breaks: true,
   })
+
+  // $: console.log('$cytosis updated: ', {$cytosis} )
+  // $: console.log('$makers updated: ', {$makers} )
+  // $: console.log('$content updated: ', {content} )
 
 </script>
 
