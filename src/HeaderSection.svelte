@@ -2,9 +2,9 @@
 	<a class="Logotype" href="#home">MaskFashion</a>
 	<div class="Menu">
 		<div class="desktop-links">
-			<a class="{ isActive('buy') }" href="/buy">Buy a Mask</a>
-			<a class="{ isActive('make') }" href="/make">Make a Mask</a>
-			<a class="{ isActive('donate') }" href="/donate">Donate a Mask</a>
+			<a href="#buy">Buy a Mask</a>
+			<a href="#make">Make a Mask</a>
+			<a href="#donate">Donate a Mask</a>
 		</div>
 		<div class="mobile-burger">
 			<button
@@ -27,13 +27,12 @@
 	</div>
 </section>
 
-<script>
-  export let active;
-  $: isActive = str => active === str ? 'selected' : '';
-</script>
 
 <style type="text/scss">
-  @import '../styles/core';
+  @import './styles/core';
+
+
+//    general app styles 
   .Header-section {
   	display: flex;
     justify-content: space-between;
@@ -86,6 +85,8 @@
 	  }
 
   }
+
+
 
 </style>
 

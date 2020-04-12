@@ -78,6 +78,7 @@
     width: 100%;
     max-width: 1500px;
     padding: $unit * 2;
+    padding-top: 0;
   }
 
   * {
