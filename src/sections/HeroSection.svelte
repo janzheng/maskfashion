@@ -40,7 +40,7 @@
 </script>
 
 <style type="text/scss">
-	@import './styles/core';
+	@import '../styles/core';
 
 	.Hero-section {
 		.image-tagline {

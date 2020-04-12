@@ -65,7 +65,6 @@
 <style type="text/scss">
   @import './styles/core';
 
-  // general app styles 
   .App {
     width: 100%;
     max-width: 1500px;
