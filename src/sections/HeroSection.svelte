@@ -58,7 +58,7 @@
 			.hero-tagline {
 				position: absolute;
 				top: 115px;
-				left: 30px;
+				left: 32px;
 				width: 225px;
 				background: white;
 				border-radius: 10px;
