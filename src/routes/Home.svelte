@@ -8,13 +8,19 @@
     routeName={'all-content'}
     bind:cytosis={data}
   >
-    <HeroSection />
-    <MakerSection />
-    <MakeAMaskSection />
-    <CommunitiesSection />
-    <DonateSection />
-    <FYISection />
-    <FooterSection />
+    {#if isLoading}
+      Content is loading
+    {/if}
+
+    {#if !isLoading}
+      <HeroSection />
+      <MakerSection />
+      <MakeAMaskSection />
+      <CommunitiesSection />
+      <DonateSection />
+      <FYISection />
+      <FooterSection />
+    {/if}
   </Cytosis>
 </main>
 
@@ -38,9 +44,11 @@
 
 
   let data
+  let isLoading = true
   // cytosis.update(data)
 
   $: if(data) {
+    isLoading = false
     cytosis.set(data)
     makers.set(data.tables['Mask Makers'])
     dropoff.set(data.tables['Mask Dropoff'])
