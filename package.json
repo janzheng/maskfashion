@@ -28,9 +28,10 @@
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "marked": "^0.8.2",
+    "navaid": "^1.1.0",
+    "node-sass": "^4.13.1",
     "sirv-cli": "^0.4.4",
-    "svelte-preprocess": "^3.7.1",
-    "node-sass": "^4.13.1"
+    "svelte-preprocess": "^3.7.1"
   },
   "scripts": {
     "build": "rollup -c",

@@ -9,7 +9,7 @@
 </div>
 
 <style type="text/scss">
-  @import './styles/core';
+  @import '../styles/core';
 
 </style>
 

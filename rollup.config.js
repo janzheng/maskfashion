@@ -13,7 +13,7 @@ import autoPreprocess from 'svelte-preprocess';
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-	input: 'src/main.js',
+	input: 'src/bundle.js',
 	output: {
 		sourcemap: true,
 		format: 'iife',

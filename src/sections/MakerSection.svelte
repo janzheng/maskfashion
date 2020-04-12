@@ -21,7 +21,7 @@
 
 <script>
 
-  import MakerGrid from './Components/MakerGrid.svelte'
+  import MakerGrid from '../components/MakerGrid.svelte'
 
 
 
@@ -31,7 +31,7 @@
 
 
 <style type="text/scss">
-  @import './styles/core';
+  @import '../styles/core';
 
 </style>
 
