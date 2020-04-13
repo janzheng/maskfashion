@@ -1,37 +1,69 @@
+<script>
+  import MakerGrid from '../components/MakerGrid.svelte'
+</script>
 
 <div class="Maker-section section">
+	<h2 class="Maker-title title">Find a <span>Mask Maker</span></h2>
 
-	<h2 class="Maker-title title">Find a Mask Maker</h2>
-
-	<div class="Maker-desc desc">
+	<p class="Maker-desc desc">
 		Many folks have been laid off and are spending their time and money to make masks for medical professionals and their communities. Let's support them by donating or buying a mask!
-	</div>
+	</p>
 
 	<MakerGrid />
 
-	<div class="MakeAMask-cta cta">
-		<a href="#">See all makers →</a>
-	</div>
-
+	<a href="#">See all makers →</a>
 </div>
-
-
-
-
-
-<script>
-
-  import MakerGrid from '../components/MakerGrid.svelte'
-
-
-
-</script>
-
-
-
 
 <style type="text/scss">
   @import '../styles/core';
+
+	.Maker-section {
+	    margin-left: -32px;
+		margin-right: -32px;
+		background: #D9F7F2;
+		padding: 34px 30px;
+
+		h2, p, a {
+			color: #3d3b37;
+		}
+
+		h2 {
+			font-size: 24px;
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+
+		h2 span {
+			font-weight: 500;
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 18px;
+    		font-weight: 500;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 21px;
+			font-weight: 300;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.Maker-section {
+			padding: 80px 30px 50px 30px;
+
+			h2 {
+				font-size: 50px;
+			}
+
+			.Maker-desc {
+				font-size: 20px;
+    			padding-top: 24px;
+			}
+		}
+	}
 
 </style>
 

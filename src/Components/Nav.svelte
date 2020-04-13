@@ -3,7 +3,6 @@
   $: isActive = str => active === str ? 'selected' : '';
 
   import Hamburger from '../sections/Hamburger.svelte'
-
 </script>
 
 <section class="Header-section">
@@ -30,7 +29,7 @@
 
 	a {
 		text-decoration: none;
-		color: black;
+		color: #3D3B37;
 	}
 
 	.Logotype {

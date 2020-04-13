@@ -1,5 +1,5 @@
 
-<main class="App">
+<div class="App">
 
   <Cytosis 
     airKey={'keylYLkFHWTY3b8Ca'} 
@@ -22,7 +22,7 @@
       <FooterSection />
     {/if}
   </Cytosis>
-</main>
+</div>
 
 
 <script>

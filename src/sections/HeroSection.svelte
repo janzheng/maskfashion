@@ -7,8 +7,8 @@
 		/>
 
 		<div class="hero-tagline">
-			<h2>“My mask protects you, your mask protects me.”</h2>
-			<h3>#maskfashion: discover mask makers</h3>
+			<h1>“My mask protects you, your mask protects me.”</h1>
+			<h2>#maskfashion: discover mask makers</h2>
 		</div>
 	</div>
 	<div class="explainer">
@@ -65,17 +65,18 @@
 				padding: 14px 12px 26px 12px;
 				font-weight: 300;
 
-				h2, h3 {
+				h1, h2 {
 					font-weight: 400;
+					color: #3D3B37;
 				}
 
-				h2 {
+				h1 {
 					font-size: 30px;
 					line-height: 35px;
 					padding-bottom: 12px;
 				}
 
-				h3 {
+				h2 {
 					font-size: 16px;
 					line-height: 19px;
 					padding-bottom: 0;
