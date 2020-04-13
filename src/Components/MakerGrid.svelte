@@ -11,28 +11,26 @@
   bind:cytosis={$cytosis}
   bind:table={$makers}
 > -->
-	<div>
-		{#if $makers}
-			<ul class="maker-grid">
-				{#each $makers as item (item.id)}
-					{#if item.fields.Photos && item.fields.Photos.length > 0}
-						<div class="maker-item-container">
-							<div class="maker-item">
-								<img alt="{item.fields.Name} thumbnail" src={item.fields.Photos[0].thumbnails.large.url} />
-								<div class="maker-desc">
-									<div class="maker-name">{item.fields['Name']}</div>
-									<div class="maker-location">{item.fields['Location']}</div>
-									{#if item.fields['Donation & Pricing Info']}
-										<div class="maker-pricing">{@html marked(item.fields['Donation & Pricing Info'])}</div>
-									{/if}
-								</div>
-							</div>
+{#if $makers}
+	<div class="maker-grid">
+		{#each $makers.slice(0,6) as item (item.id)}
+			{#if item.fields.Photos && item.fields.Photos.length > 0}
+				<div class="maker-item-container">
+					<img alt="{item.fields.AltText}" src={item.fields.Photos[0].thumbnails.large.url} />
+					<div class="maker-desc">
+						<p class="maker-name">{item.fields['Name']}</p>
+						<div class="details">
+							<p class="maker-location">{item.fields['Location']}</p>
+							{#if item.fields['Donation & Pricing Info']}
+								<p class="maker-pricing">{@html item.fields['Donation & Pricing Info']}</p>
+							{/if}
 						</div>
-					{/if}
-				{/each}
-			</ul>
-		{/if}
+					</div>
+				</div>
+			{/if}
+		{/each}
 	</div>
+{/if}
 <!-- </Cytosis> -->
 
 
@@ -64,34 +62,61 @@
 
 
 <style type="text/scss">
-  .maker-grid {
-    list-style: none;
+	.maker-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		margin-top: 4px;
+		margin-bottom: 24px;
+		
+		.maker-item-container {
+			margin-top: 20px;
+			border-radius: 10px;
+			overflow: hidden;
 
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  	position: relative;
+			img {
+				width: 100%;
+				height: 250px;
+				object-fit: cover;
+			}
 
-    img {
-		  width: 100%;
-		  height: 250px;
-      object-fit: cover;
-    }
-  }
+			.maker-desc {
+				background-color: white;
+				padding: 8px;
+				text-align: left;
+				margin-top: -7px;
 
-  .maker-item-container {
-  	border-radius: 6px;
+				.details {
+					display: flex;
+					justify-content: space-between;
 
-  	.maker-item {
-  		// display: flex;
-  	}
-  }
+					p {
+						display: inline;
+					}
+				}
+			}
 
-  .maker-desc {
-  	background-color: white;
-  	padding: 8px;
-  	text-align: left;
-  }
+			.maker-name {
+				font-size: 18px;
+				font-weight: 500;
+			}
+
+			.maker-location {
+				font-size: 16px;
+			}
+  		}
+	}
+
+	@media (min-width: 768px) {
+		.maker-grid {
+			margin-top: 46px;
+			margin-bottom: 65px;
+
+			.maker-item-container {
+				max-width: 400px;
+			}
+		}
+	}
 </style>
 
 
