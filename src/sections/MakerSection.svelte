@@ -52,7 +52,6 @@
 
 	@media (min-width: 768px) {
 		.Maker-section {
-			padding: 80px 30px 50px 30px;
 
 			h2 {
 				font-size: 50px;
@@ -62,6 +61,12 @@
 				font-size: 20px;
     			padding-top: 24px;
 			}
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.Maker-section {
+			padding: 80px 100px 50px 100px;
 		}
 	}
 

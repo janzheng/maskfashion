@@ -73,6 +73,7 @@
 			margin-top: 20px;
 			border-radius: 10px;
 			overflow: hidden;
+			max-width: 440px;
 
 			img {
 				width: 100%;
@@ -112,6 +113,14 @@
 			margin-top: 46px;
 			margin-bottom: 65px;
 
+			.maker-item-container {
+				max-width: 300px;
+			}
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.maker-grid {
 			.maker-item-container {
 				max-width: 400px;
 			}
