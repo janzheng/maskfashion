@@ -100,12 +100,12 @@
 					top: 80px;
     				left: 45px;
 					
-					h2 {
+					h1 {
 						font-size: 38px;
     					line-height: 47px;
 					}
 
-					h3 {
+					h2 {
 						font-size: 28px;
     					line-height: 35px;
 					}
