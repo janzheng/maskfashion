@@ -27,10 +27,6 @@
 			width: 100%;
 		}
 
-		.Communities-title, .Communities-desc, a {
-			color: #3d3b37;
-		}
-
 		.Communities-title {
 			padding-top: 33px;
 			font-size: 30px;
@@ -97,7 +93,7 @@
 		}
 	}
 
-	@media (min-width: 1280px) {
+	@media (min-width: 1080px) {
 		.Communities-section {
 			.Communities-title {
 				font-size: 36px;

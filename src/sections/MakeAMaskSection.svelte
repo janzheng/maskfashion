@@ -69,10 +69,6 @@
 		position: relative;
     	overflow: hidden;
 
-		h2, a {
-			color: #3d3b37;
-		}
-
 		a {
 			text-decoration: none;
 			font-size: 18px;
@@ -142,7 +138,7 @@
 		}
 	}
 
-	@media (min-width: 1280px) {
+	@media (min-width: 1080) {
 		.MakeAMask-section {
 			svg {
 				height: 800px;

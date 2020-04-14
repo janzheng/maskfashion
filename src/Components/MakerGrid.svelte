@@ -119,7 +119,7 @@
 		}
 	}
 
-	@media (min-width: 1280px) {
+	@media (min-width: 1080px) {
 		.maker-grid {
 			.maker-item-container {
 				max-width: 400px;

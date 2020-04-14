@@ -75,7 +75,6 @@
     a {
         display: block;
         text-decoration: none;
-        color: #3D3B37;
     }
 	
 	button {

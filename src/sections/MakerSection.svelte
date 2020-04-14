@@ -23,10 +23,6 @@
 		background: #D9F7F2;
 		padding: 34px 30px;
 
-		h2, p, a {
-			color: #3d3b37;
-		}
-
 		h2 {
 			font-size: 24px;
 			text-transform: uppercase;
@@ -64,7 +60,7 @@
 		}
 	}
 
-	@media (min-width: 1280px) {
+	@media (min-width: 1080px) {
 		.Maker-section {
 			padding: 80px 100px 50px 100px;
 		}

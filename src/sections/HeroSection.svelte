@@ -67,7 +67,6 @@
 
 				h1, h2 {
 					font-weight: 400;
-					color: #3D3B37;
 				}
 
 				h1 {
