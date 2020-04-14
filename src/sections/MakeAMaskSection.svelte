@@ -138,11 +138,12 @@
 		}
 	}
 
-	@media (min-width: 1080) {
+	@media (min-width: 1080px) {
 		.MakeAMask-section {
 			svg {
 				height: 800px;
 				width: 800px;
+				left: -52px;
 			}
 		}
 	}

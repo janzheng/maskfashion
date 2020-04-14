@@ -6,7 +6,7 @@
 		class='communities-img'
 	/>
 	<div class="communities-info">
-		<h1 class="Communities-title title">Mask making communities</h1>
+		<h2 class="Communities-title title">Mask making communities</h2>
 		<p class="Communities-desc desc">Lots of small communities are organizing mask-making around the world. I don't have very many of them but please add your local communities to this list, if you can.
 		</p>
 		<div class="Communities-cta cta">
@@ -35,7 +35,8 @@
 
 		.Communities-desc {
 		    font-size: 24px;
-    		line-height: 28px;
+			line-height: 28px;
+			font-weight: 300;
 		}
 
 		.Communities-cta {
