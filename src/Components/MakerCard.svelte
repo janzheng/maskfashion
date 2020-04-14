@@ -1,5 +1,5 @@
 <script>
-	export let photo
+  export let photo;
 </script>
 
 <style>
@@ -42,12 +42,12 @@
 </style>
 
 <il class="photo-card">
-	<a href={photo.links.html} rel="noopener noreferrer" targt="_blank">
-		<img class="photo" src={photo.urls.small} alt={photo.description || ""}>
-	</a>
-	<span class="photographer">
-		<a href={photo.user.links.html} rel="noopener noreferrer" target="_blank">{photo.user.name}</a>
-	</span>
+  <a href={photo.links.html} rel="noopener noreferrer" targt="_blank">
+    <img class="photo" src={photo.urls.small} alt={photo.description || ''} />
+  </a>
+  <span class="photographer">
+    <a href={photo.user.links.html} rel="noopener noreferrer" target="_blank">
+      {photo.user.name}
+    </a>
+  </span>
 </il>
-
-

@@ -1,24 +1,17 @@
-
-
-<main class="App">
-  <Nav {active} />
-  <svelte:component this={Route} {params} />
-</main>
-
-
-
 <script>
-  import Navaid from 'navaid';
-  import { onDestroy } from 'svelte';
-  import Nav from './Nav.svelte'
+  import Navaid from "navaid";
+  import { onDestroy } from "svelte";
+  import Nav from "./Nav.svelte";
 
-  import Home from '../routes/Home.svelte'
-  import About from '../routes/About.svelte'
-  import FourOhFour from '../routes/404.svelte'
+  import Home from "../routes/Home.svelte";
+  import About from "../routes/About.svelte";
+  import FourOhFour from "../routes/404.svelte";
 
-  let Route, params={}, active;
+  let Route,
+    params = {},
+    active;
   let uri = location.pathname;
-  $: active = uri.split('/')[1] || 'home';
+  $: active = uri.split("/")[1] || "home";
 
   // router, copied from svelte-demo
   // function run(thunk, obj) {
@@ -42,18 +35,18 @@
   //   });
   // }
 
-  const router = Navaid('/', () => {
-    console.log('404!')
+  const router = Navaid("/", () => {
+    console.log("404!");
     // run(import('../routes/404.svelte'))
     Route = FourOhFour;
     window.scrollTo(0, 0);
   })
-    .on('/', () => {
+    .on("/", () => {
       // run(import('../routes/Home.svelte')))
       Route = Home;
       window.scrollTo(0, 0);
     })
-    .on('/about', () => {
+    .on("/about", () => {
       Route = About;
       window.scrollTo(0, 0);
       // run(import('../routes/About.svelte'))
@@ -63,17 +56,12 @@
     .listen();
 
   onDestroy(router.unlisten);
-
-
 </script>
 
-
-
-
 <style type="text/scss">
-  @import '../styles/core';
+  @import "../styles/core";
 
-  // general app styles 
+  // general app styles
   .App {
     width: 100%;
     max-width: 1500px;
@@ -91,14 +79,9 @@
     font-weight: bold;
     padding-bottom: $unit;
   }
-
-
-
 </style>
 
-
-
-
-
-
-
+<main class="App">
+  <Nav {active} />
+  <svelte:component this={Route} {params} />
+</main>
